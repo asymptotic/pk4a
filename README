@@ -1,0 +1,18 @@
+PK4A - Pyrokinesis for Alex
+http://site3.ca/projects/pk4a
+
+
+PK4A stands for “Pyrokinesis for Alex”, where Alex is the last person you’d want to have the ability to shoot fire with the power of her mind. Using a wireless EEG headset and a control unit connected to a flame effect, participants can create 20′+ blasts of fire with their thoughts.
+
+The box contains an Arduino clone (RBBB from Modern Device), BlueSMiRF module, and a MOSFET circuit to switch the 12V power source out to the solenoid on the flame effect. The blue light turns on when the brainwave signal from the headset is high quality, and the red light turns on when the box is switching out power. The LCD screen provides basic information such as the fire control mode, EEG link quality, and values read back from the EEG. There’s also a red button on the box which changes the fire control mode.
+
+The headset is a NeuroSky MindSet. The EEG uses one dry sensor on the forehead and three reference sensors on the ear. It communicates over a Bluetooth serial link with a fairly simple protocol. The MindSet provides raw wave data, eight brainwave band values, and two values for “attention” and “meditation” which are computed by a proprietary NeuroSky algorithm. Currently the flame effect is triggered by the attention and meditation values, although the next box will have eight outputs and will act as a brainwave visualizer for the eight brainwave bands.
+
+The flame effect is fueled by LP gas (propane). In this setup it uses a 100lb accumulator tank to hold the vapor; the larger tank allows for longer blasts. The box is designed to be simple and portable; it can easily be attached to any flame effect head that uses a 12VDC solenoid.
+
+The code in this project is the Arduino sketch that reads the brainwave data over Bluetooth, displays information on the LCD, and fires the flame effect as required.
+
+Thanks to Firefly Arts Collective for partial funding of this project with an art grant for Firefly 2010!
+
+Video of PK4A in action:
+  http://vimeo.com/13145027
